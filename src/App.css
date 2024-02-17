@@ -1,0 +1,56 @@
+/* App.css */
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* Add this line if you're using box-sizing in your project */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: rgb(131, 99, 99);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  margin:0;
+}
+
+.header {
+  /* Assuming .header class exists in Header component's CSS */
+  background-image: url("/handf.jpg");
+  
+  width: 100%;
+  z-index: 10;
+}
+
+.main {
+  flex-grow: 1; /* Take up all available space */
+   /* Adjust based on the header's height to prevent content from being hidden behind the fixed header */
+  
+  
+ background-color:white;
+}
+
+.footer {
+  /* Assuming .footer class exists in Footer component's CSS */
+  background-image: url("/handf.jpg");
+  
+  width: 100%;
+  z-index: 10;
+}

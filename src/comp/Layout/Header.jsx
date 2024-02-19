@@ -35,14 +35,14 @@ const Header = () => {
     }
   }, [location]);
 
-  useEffect(() => {
-    // Attempt to play audio on mount
-    if (audioRef.current) {
-      audioRef.current.play().catch((error) => {
-        console.error('Audio playback failed:', error);
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Attempt to play audio on mount
+  //   if (audioRef.current) {
+  //     audioRef.current.play().catch((error) => {
+  //       console.error('Audio playback failed:', error);
+  //     });
+  //   }
+  // }, []);
 
   const toggleAudio = () => {
     if (audioRef.current) {

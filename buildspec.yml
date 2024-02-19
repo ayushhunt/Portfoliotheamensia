@@ -2,13 +2,10 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 20
     commands:
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
       - source "$NVM_DIR/nvm.sh"
-      - nvm install 20
       - nvm install 21
       - npm install -g yarn
       - yarn install

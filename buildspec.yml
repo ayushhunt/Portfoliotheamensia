@@ -1,18 +1,27 @@
-version:0.2
+version: 0.2
+
 phases:
   install:
-    runtime-version:
-      nodejs:21
-    pre_build:
-      commands:
-        - npm install
-    build:
-      command:
-        -npm run build
+    runtime-versions:
+      nodejs: 21
+    commands:
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+      - export NVM_DIR="$HOME/.nvm"
+      - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+      - [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+      - nvm install 21
+      - npm install -g yarn
+      - yarn install
+
+  pre_build:
+    commands:
+      # Optionally, you can run any pre-build commands here
+
+  build:
+    commands:
+      - yarn build
 
 artifacts:
   files:
-    -'**/*'
-    - "dist/**/*"
-  base-directory: 'dist'
-  #discard-paths: yes
+    - '**/*'
+  base-directory: 'dist' # Adjust this based on your build output directory

@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 16
     commands:
       - npm install -g yarn
       - yarn install
@@ -11,7 +11,6 @@ phases:
   pre_build:
     commands:
       # Optionally, you can run any pre-build commands here
-      - yarn lint
 
   build:
     commands:
@@ -21,4 +20,3 @@ artifacts:
   files:
     - '**/*'
   base-directory: 'dist' # Adjust this based on your Vite output directory
-

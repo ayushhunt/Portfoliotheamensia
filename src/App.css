@@ -42,7 +42,7 @@ html, body {
 .main {
   flex-grow: 1; /* Take up all available space */
    /* Adjust based on the header's height to prevent content from being hidden behind the fixed header */
-   /*testing changes 2*/
+   /*testing changes 3*/
   background-color: white;
   
 }

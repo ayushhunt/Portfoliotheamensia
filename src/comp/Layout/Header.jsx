@@ -70,6 +70,12 @@ const Header = () => {
             <Link to="/">
               <img src={logoimage} alt="The Amnesia Logo" style={{ width: 140, height: 30 }} />
             </Link>
+            <Grid item >
+          <IconButton color="inherit" onClick={toggleAudio}>
+            {audioRef.current && !audioRef.current.paused ? <VolumeOffIcon /> : <VolumeUpIcon />}
+          </IconButton>
+          </Grid>
+        <audio ref={audioRef} src={audioFile} onEnded={() => {}} />
             <DrawerComp/>
           </>
         ):(

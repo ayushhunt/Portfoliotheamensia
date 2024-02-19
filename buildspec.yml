@@ -3,13 +3,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 21
+      nodejs: 16 # Specify the default version to install NVM
     commands:
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
       - export NVM_DIR="$HOME/.nvm"
-      - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-      - [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-      - nvm install 21
+      - '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm'
+      - '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion'
+      - nvm install 16 # Install Node.js 16, the LTS version
+      - nvm install 21 # Install Node.js 21
       - npm install -g yarn
       - yarn install
 

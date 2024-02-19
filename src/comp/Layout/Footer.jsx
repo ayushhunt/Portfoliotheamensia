@@ -20,17 +20,23 @@ const Footer = () => {
       instagram: '#e1306c',
       linkedin: '#0077b5'
     };
-    const phoneNumber='+919315996393';
-    const Address="Address Villa-14, INDIRA NAGAR PHASE-A";
-    const Address2="Indira Colony, Rajendra Nagar ,  Ghaziabad";
+    const phoneNumber='+916261461832';
+    const phoneNumber2='+916260139976';
     const Email="theamensia@gmail.com";
 
   return (
-    <Box component="footer"  sx={{ background:'white', 
-    backgroundSize: 'cover',
-    backgroundPosition: 'center', bgcolor: 'white', width: '100%', color: 'black' }}>
+    <Box component="footer"  sx={{
+      backgroundColor: 'transparent',
+      backgroundImage: `url('/handf.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat',
+      width: '100%', // Ensure it takes up full width
+      // ... other styles
+    }}
+  >
     
-        <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' ,p:4,m:0}}>
+        <Grid container spacing={2} justifyContent="center" sx={{ mx: 'auto' ,p:4,m:0,color:'white'}}>
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h5" gutterBottom>
               Portfolio 
@@ -56,22 +62,21 @@ const Footer = () => {
             <Typography style={{fontSize:'17px'}}>
             {phoneNumber}
             <CopyPhoneNumber phoneNumber={phoneNumber}/><br/>
+            {phoneNumber2}
+            <CopyPhoneNumber phoneNumber={phoneNumber}/><br/>
             {Email}
             <CopyPhoneNumber phoneNumber={Email}/>
             <br/>
-              {Address}
-              <br/>
-              {Address2}
-            <IconButton
+            /*<IconButton
               color="primary"
               aria-label="Get Directions"
               component="a"
-              href='https://maps.app.goo.gl/aNFeWUW28hsEKKAh9'
+              href='https://maps.app.goo.gl/'
               target="_blank"
               rel="noopener noreferrer"
             >
                 <LocationOnIcon/>
-            </IconButton>
+            </IconButton>*/
             </Typography>
             
           </Grid>
@@ -81,7 +86,7 @@ const Footer = () => {
             </Typography>
             <Box>
             {/* Wrap IconButton with MUIlink*/}
-            <MUIlink href="https://www.facebook.com" target="_blank" >
+            <MUIlink href="https://www.facebook.com/profile.php?id=61556339049396" target="_blank" >
               <IconButton aria-label="Facebook" style={{ color: brandColors.facebook }}>
                 <Facebook />
               </IconButton>
@@ -94,11 +99,6 @@ const Footer = () => {
             <MUIlink href="https://www.instagram.com/the_amensia/" target="_blank" color="inherit">
               <IconButton aria-label="Instagram" style={{ color: brandColors.instagram }}>
                 <Instagram />
-              </IconButton>
-            </MUIlink>
-            <MUIlink href="https://www.linkedin.com" target="_blank" color="inherit">
-              <IconButton aria-label="LinkedIn" style={{ color: brandColors.linkedin }}>
-                <LinkedIn />
               </IconButton>
             </MUIlink>
           </Box>

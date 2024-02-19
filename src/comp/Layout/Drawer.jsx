@@ -8,8 +8,8 @@ const DrawerComp = () => {
   const [open,setOpen]=useState(false);
   return (
     <>
-        <Drawer PaperProps={{ sx: {backgroundColor:'rgba(9,9,121,1)'}}} open={open} onClose={()=>setOpen(false)}>
-        <List>
+        <Drawer PaperProps={{ sx: {backgroundColor:'white'}}} open={open} onClose={()=>setOpen(false)}>
+        <List >
             <ListItemButton>
                 <ListItemIcon>
                     <ListItemText>
@@ -40,7 +40,7 @@ const DrawerComp = () => {
             </ListItemButton>
         </List>
         </Drawer>
-        <IconButton sx={{marginLeft:'auto'}} onClick={()=> setOpen(!open)}>
+        <IconButton sx={{marginLeft:'auto', color:'white'}} onClick={()=> setOpen(!open)}>
             <MenuRoundedIcon/>
         </IconButton>
     </>

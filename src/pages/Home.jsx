@@ -33,9 +33,9 @@ const Home = () => {
           image: "/card1.jpg",
         },
         {
-          title: "The Cultural Singnificance",
+          title: "Cultural Singnificance",
           description: "Events orgainsed on our own cultural theme.",
-          image: "/image7.jpg",
+          image: "/image10.jpg",
         },
         {
           title: "Isolated and Exotic scenry",
@@ -60,15 +60,15 @@ const Home = () => {
       ];
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" style={{ alignContent: "center",my:4,color:"black" }}>
       <br/>
       <ImageSlider />
       <br/>
       <br />
-      <Typography variant="h4" gutterBottom color='white'>
+      <Typography variant="h4" gutterBottom >
         The Amensia :Reviving tradition with innovation
       </Typography>
-      <Typography paragraph style={{fontSize:'18px'}} color='white'>
+      <Typography paragraph style={{fontSize:'18px'}} >
       Welcome to "The Amensia," where we redefine the celebration of cultural heritage for a global audience. 
       Our mission is to bring the vibrancy of world traditions to the forefront, creating immersive experiences 
       that foster unity, understanding, and joy. By blending ancient rituals with contemporary celebration styles, 
@@ -80,14 +80,23 @@ const Home = () => {
       <Divider sx={{ my: 4 }} />
       <Typography variant='h4'>Our Next Event:</Typography>
       <br/>
-      <Typography variant="h3" component="h1" gutterBottom align="center" style={{fontStyle:"italic"}}>SARARA THE SANGUM</Typography>
+      <Box
+  sx={{
+    display: 'flex', // Set display to flex
+    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', // Center vertically
+  }}
+>
+         <img src='/SARA THE SANGUM.gif' alt='sarathesangum' width="600" height="200"></img>
+         </Box>
+      <br/>
       <IconButton onClick={togglePlayPause} aria-label="toggle voice recording">
-        <Typography variant='h4'>Hear the Announcement: </Typography>
-        <CampaignIcon sx={{ fontSize: '100', color: 'black' }} /> {/* Change size here */}
+        <Typography variant='h4' >Hear the Announcement: </Typography>
+        <CampaignIcon sx={{ fontSize: '200' }} /> {/* Change size here */}
       </IconButton>
       <audio ref={audioRef} src="/audio2.mp3" hidden></audio>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, my: 2 }}>
-        <Typography variant="h4" gutterBottom component="div" color='violet'> 
+        <Typography variant="h4" gutterBottom component="div" > 
           Event include's
         </Typography>
         <Divider flexItem orientation="horizontal" sx={{ bgcolor: 'text.primary' }} />
@@ -116,27 +125,37 @@ const Home = () => {
       ))}
     </Grid>
       <br/><br/>
-      <Typography variant='h6' gutterBottom  color='red'>
+      <Typography variant='h6' gutterBottom  >
       Our Next Venue Details
       </Typography>
 
-      <Typography style={{fontSize:'15px'}} gutterBottom color='blue'>
+      <Typography style={{fontSize:'15px'}} gutterBottom >
         We are in chattishgarh on Holi.<br/>
         Complete venue details be shared soon
       </Typography>
       <br/>
       <br/>
-      <Typography variant='h6' gutterBottom color='Black'>
+      <Typography variant='h6' gutterBottom >
         Get Your Ticket for Chahhtisgrah Holi event now:
       </Typography>
-      <Typography style={{fontSize:'15px'}} color='red'>
+      <Typography style={{fontSize:'15px'}} >
         Pay the entry fee of Rs.250 only to confirm your ticket.
       </Typography>
       <br/>
-      <Typography style={{fontSize:'15px'}} color='black'>
+      <Typography style={{fontSize:'15px'}} >
         Note: Make the payment on the attached QR code and copypaste the reference number here and submit the form with other details.
       </Typography>
       <br/>
+      <br/>
+      <Box
+  sx={{
+    display: 'flex', // Set display to flex
+    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', // Center vertically
+  }}
+>
+         <img src='/Register now.gif' alt='regiternow' width="300" height="80"></img>
+         </Box>
       <br/>
       <FormComponent/>
     </Container>

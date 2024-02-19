@@ -48,19 +48,19 @@ const ImageSlider = () => {
     }}>
       <Slider {...settings}>
         <div>
-          <img src="image1.jpg" alt="Image 1" style={{ width: '100%', height: 'auto' }}/>
+          <img src="image7.png" alt="Image 1" style={{ width: '100%', height: 'auto' }}/>
         </div>
         <div>
-          <img src="image7.jpg" alt="Image 2" style={{ width: '100%', height: 'auto' }}/>
+          <img src="image4.png" alt="Image 2" style={{ width: '100%', height: 'auto' }}/>
         </div>
         <div>
-          <img src="image8.jpg" alt="Image 3" style={{ width: '100%', height: 'auto' }}/>
+          <img src="Thrilling Music.png" alt="Image 3" style={{ width: '100%', height: 'auto' }}/>
         </div>
         <div>
-          <img src="image9.jpg" alt="Image 4" style={{ width: '100%', height: 'auto' }}/>
+          <img src="Create Memories.png" alt="Image 4" style={{ width: '100%', height: 'auto' }}/>
         </div>
         <div>
-          <img src="image10.jpg" alt="Image 5" style={{ width: '100%', height: 'auto' }}/>
+          <img src="image10.png" alt="Image 5" style={{ width: '100%', height: 'auto' }}/>
         </div>
       </Slider>
       </div>

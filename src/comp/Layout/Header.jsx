@@ -56,10 +56,14 @@ const Header = () => {
 
   return (
     <AppBar position="static" sx={{
-        background:'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%)', // Replace with your image path
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
+      backgroundColor: 'transparent',
+      backgroundImage: `url('/handf.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat',
+      width: '100%', // Ensure it takes up full width
+      // ... other styles
+    }}>
       <Toolbar>
         {isMatch ? (
           <>

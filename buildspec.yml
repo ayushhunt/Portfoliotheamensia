@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - npm install  # Using npm instead of yarn
+      - npm ci       # Use `npm ci` for a more reliable and reproducible install
+
+  pre_build:
+    commands:
+      # Optionally, you can run any pre-build commands here
+
+  build:
+    commands:
+      - npm run build  # Using npm instead of yarn for running build script
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'  # Adjust this based on your Vite output directory
+
+cache:
+  paths:
+    - node_modules  # Cache node_modules for faster builds

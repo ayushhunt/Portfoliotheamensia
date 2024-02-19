@@ -1,0 +1,19 @@
+version:0.2
+
+phases:
+  install:
+    runtime-version:
+      nodejs:21
+    pre_build:
+      commands:
+        - npm install
+    build:
+      command:
+        -npm run build
+
+artifacts:
+  files:
+    -'**/*'
+    #- "dist/**/*"
+  base-directory: 'dist'
+  #discard-paths: yes

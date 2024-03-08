@@ -66,7 +66,7 @@ const Home = () => {
       <br/>
       <br />
       <Typography variant="h4" gutterBottom >
-        The Amensia :Reviving tradition with innovation
+        The Amensia :Reviving tradition with innovation 
       </Typography>
       <Typography paragraph style={{fontSize:'18px'}} >
       Welcome to "The Amensia," where we redefine the celebration of cultural heritage for a global audience. 
@@ -78,7 +78,7 @@ const Home = () => {
       is cherished and shared.      </Typography>
       
       <Divider sx={{ my: 4 }} />
-      <Typography variant='h4'>Our Next Event:</Typography>
+      <Typography variant='h4'>Our Next Event of Holi:</Typography>
       <br/>
       <Box
   sx={{

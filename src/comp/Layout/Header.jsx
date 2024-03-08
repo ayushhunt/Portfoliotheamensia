@@ -47,7 +47,15 @@ const Header = () => {
   const toggleAudio = () => {
     if (audioRef.current) {
       if (audioRef.current.paused) {
-        audioRef.current.play();
+        const playPromise = audioRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // Autoplay started
+        }).catch((error) => {
+          console.error('Autoplay failed:', error);
+        });
+      }
       } else {
         audioRef.current.pause();
       }
